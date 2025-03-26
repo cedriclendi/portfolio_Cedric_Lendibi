@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="A propos | Cedric Lendibi" description="d">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="A propros"
+				tagline=""
+			>
+				
+			</Hero>
+
+			<section>
+				<h2 class="section-title">A propos de moi</h2>
+				<div class="content">
+					
+					<p>
+						Dans un monde digitaliser, l'informatique joue un role important dans 
+						son developpement. En effet le monde informatique
+
+						À propos
+
+Passionné par l’informatique et les systèmes d’information,
+je suis actuellement étudiant en BTS Services Informatiques aux Organisations (SIO), 
+ spécialité SLAM (Solutions Logicielles et Applications Métiers).
+Mon objectif est d’acquérir des compétences solides en développement web et en gestion des systèmes d’information afin de poursuivre un master et me spécialiser davantage dans ce domaine.
+Curieux et rigoureux, j’aime relever des défis techniques et approfondir mes connaissances en programmation,
+en conception d’applications et en gestion de bases de données.
+Mon parcours me permet de développer une approche pragmatique et efficace face aux problématiques informatiques.
+
+					</p>
+					<p>
+						
+					</p>
+					<p>
+						
+					</p>
+				</div>
+			</section>
+			<section>
+			
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>Programmation : langages C, Python, Java,
+						HTML/CSS, JavaScript,Github,Gitlab
+						</p>
+						<p>Système d'administration : Windows Server,
+						Linux, Active Directory
+						</p>
+						<p>Réseaux : TCP/IP, LAN/WAN, DNS, DHCP
+						Gestion, installation et maintenance du
+						matériel informatique (postes informatiques,
+						périphériques)</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
